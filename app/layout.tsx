@@ -1,12 +1,12 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Manrope } from "next/font/google";
 
 import { ModalProvider } from "@/providers/modal-provider";
 
 import "./globals.css";
 
-const montserrat = Montserrat({ subsets: ["latin"], weight: ["500"] });
+const manrope = Manrope({ subsets: ["latin"], weight: ["500"] });
 
 export const metadata: Metadata = {
   title: "Admin Dashboard",
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={montserrat.className}>
+        <body className={manrope.className}>
           <ModalProvider />
           {children}
         </body>
