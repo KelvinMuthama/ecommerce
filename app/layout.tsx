@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 
 import { ModalProvider } from "@/providers/modal-provider";
+import { ToasterProvider } from "@/providers/toast-provider";
 
 import "./globals.css";
 
@@ -23,6 +24,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={manrope.className}>
           <ModalProvider />
+          <ToasterProvider />
           {children}
         </body>
       </html>
