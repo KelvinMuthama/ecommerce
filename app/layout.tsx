@@ -1,13 +1,13 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 
 import { ModalProvider } from "@/providers/modal-provider";
 import { ToasterProvider } from "@/providers/toast-provider";
 
 import "./globals.css";
 
-const manrope = Manrope({ subsets: ["latin"], weight: ["500"] });
+const dM_Sans = DM_Sans({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
   title: "Admin Dashboard",
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={manrope.className}>
+        <body className={dM_Sans.className}>
           <ModalProvider />
           <ToasterProvider />
           {children}
